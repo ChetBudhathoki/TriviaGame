@@ -8,10 +8,10 @@ Click Start to begin the trivia. You have 20 seconds to answer each question and
 Click the following link to start the game
 https://chetbudhathoki.github.io/TriviaGame/
 
-Languages/Technology used
-HTML
-CSS
-Bootstrap - Framework
-JavaScript
-jQuery - JavaScript Library
+Languages/Technology used :
+*HTML
+*CSS
+*Bootstrap - Framework
+*JavaScript
+*jQuery - JavaScript Library
 
