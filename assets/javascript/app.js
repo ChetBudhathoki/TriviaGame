@@ -8,7 +8,7 @@ $(document).ready(function () {
          },
          {
             question: "What is the tallest mountain in the world?", 
-            choice: ["Mount Fuji", "King\s Peak", "Mount Everest", "Mount Kilimanjaro"],
+            choice: ["Mount Fuji", "King\'s Peak", "Mount Everest", "Mount Kilimanjaro"],
             answer: 2,
             photo: "assets/images/tallestMountainEverest.jpeg"
          }, 
@@ -107,12 +107,6 @@ $(document).ready(function () {
         index = Math.floor(Math.random()*options.length);
         pick = options[index];
     
-    //	if (pick.shown) {
-    //		//recursive to continue to generate new index until one is chosen that has not shown in this game yet
-    //		displayQuestion();
-    //	} else {
-    //		console.log(pick.question);
-            //iterate through answer array and display
             $("#questionblock").html("<h2>" + pick.question + "</h2>");
             for(var i = 0; i < pick.choice.length; i++) {
                 var userChoice = $("<div>");
@@ -123,7 +117,6 @@ $(document).ready(function () {
                 $("#answerblock").append(userChoice);
     //		}
     }
-    
     
     
     //click function to select answer and outcomes
@@ -162,7 +155,7 @@ $(document).ready(function () {
         //run the score screen if all questions answered
         if ((wrongCount + correctCount + unanswerCount) === qCount) {
             $("#questionblock").empty();
-            $("#questionblock").html("<h3>Game Over!  Here's how you did: </h3>");
+            $("#questionblock").html("<h3>Game Over!  Here's the detail: </h3>");
             $("#answerblock").append("<h4> Correct: " + correctCount + "</h4>" );
             $("#answerblock").append("<h4> Incorrect: " + wrongCount + "</h4>" );
             $("#answerblock").append("<h4> Unanswered: " + unanswerCount + "</h4>" );
@@ -176,7 +169,7 @@ $(document).ready(function () {
             displayQuestion();
     
         }
-        }, 3000);
+        }, 3 * 1000);
     
     
     }
